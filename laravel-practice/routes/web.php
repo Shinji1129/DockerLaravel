@@ -11,4 +11,11 @@
 |
 */
 
-Route::get('/member/list/', 'MemberController@getIndex');
+Route::get('member/list', 'MemberController@getIndex');
+
+Route::group(['prefix' => 'member'], function() {
+Route::get('list', 'MemberController@getIndex');
+Route::get('new', 'MemberController@new_Index');
+Route::patch('new', 'MemberController@new_confirm');
+Route::post('new', 'MemberController@new_finish');
+});

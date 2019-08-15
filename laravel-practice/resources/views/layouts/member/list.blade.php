@@ -3,8 +3,8 @@
 @section('content')
   <header id="">
 　　　<h1>Laravel Project</h1>
-<div class="nav"><a href="top.html" class="btn list-btn">ログアウト</a>
-  <a href="user_confirm.html" class="btn list-btn">管理者情報</a></div>
+<div class="nav"><a href="" class="btn list-btn">ログアウト</a>
+  <a href="" class="btn list-btn">管理者情報</a></div>
   </header>
   <section id="serch">
     <div class="head"><h2>参加者名簿一覧</h2></div>
@@ -16,7 +16,7 @@
           <div class="key">
             <input type="submit" value="検索"  class="btn serch-btn">
           </div>
-            <a href="new_index.html" class="btn create-btn">新規登録</a>
+            <a href="{{ action('MemberController@new_Index') }}" class="btn create-btn">新規登録</a>
       </div>
   </section>
   <section id="list-table">
@@ -37,8 +37,8 @@
          <td>{{$member->name}}</td>
          <td>{{$member->email}}</td>
          <td>{{$member->tel}}</td>
-         <td><a href="detaile.html" class="btn detail-btn">詳細</a></td>
-         <td><a href="edit_index.html"  class="btn edit-btn">編集</a></td>
+         <td><a href="" class="btn detail-btn">詳細</a></td>
+         <td><a href=""  class="btn edit-btn">編集</a></td>
          <td><form action="" method="">
           <input type="submit" value="削除" class="btn dell-btn"></td>
        </tr>
