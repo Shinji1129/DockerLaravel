@@ -10,11 +10,18 @@ h1, h2, p {
   margin: 0;
 }
 
-.err>span {
-  font-size: 12px;
+th>span,
+.text-danger
+ {
+  padding-left: 10px;
+  font-size: 14px;
   color: #f83b3b;
 }
-
+/* .list span {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #f83b3b;
+} */
 input[type="submit"],a {
   font-size: 18px;
   font-weight: 700;
