@@ -27,7 +27,7 @@
        <th>名前</th>
        <th>Email</th>
        <th>電話番号</th>
-       <th colspan="5"></th>
+       <th colspan="3"></th>
       </tr>
      </thead>
      <tbody>
@@ -39,8 +39,11 @@
          <td>{{$member->tel}}</td>
          <td><a href="" class="btn detail-btn">詳細</a></td>
          <td><a href="{{ action('MemberController@edit_index',[$member->id]) }}"  class="btn edit-btn">編集</a></td>
-         <td><form action="" method="">
+         <td>
+         <form action="/member/delete/{{$member->id}}" method="post">
+         @csrf
           <input type="submit" value="削除" class="btn dell-btn"></td>
+          </form>
        </tr>
        @endforeach
      </tbody>
@@ -49,6 +52,6 @@
 
   <!-- page controll -->
   <div class="pager">
-  {!! $members->render() !!}
+  {{ $members->links() }}
   </div>
 @endsection
