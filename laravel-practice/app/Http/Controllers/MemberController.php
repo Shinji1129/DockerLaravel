@@ -7,10 +7,18 @@ use Illuminate\Http\Request;
 class MemberController extends Controller
 {
 
-    public function getIndex()
+    public function getIndex(Request $rq)
     {
-        $members = \App\Member::paginate(10);
-        return view('layouts.member.list')->with('members',$members);
+        $keyword = $rq->input('keyword');
+        $query = \App\Member::query();
+
+        if(!empty($keyword))
+        {
+        $query->where('email','like','%'.$keyword.'%')->orWhere('name','like','%'.$keyword.'%');
+        }
+
+         $members = $query->orderBy('id','desc')->paginate(10);
+         return view('layouts.member.list')->with('members',$members)->with('keyword',$keyword);
     }
 
     public function new_index()
@@ -71,4 +79,5 @@ class MemberController extends Controller
 
         return redirect()->to('member/list');
     }
+
 }
