@@ -6,10 +6,10 @@ use Illuminate\Http\Request;
 
 class MemberController extends Controller
 {
+
     public function getIndex()
     {
-        $query = \App\Member::query();
-        $members = $query->orderBy('id','desc')->paginate(10);
+        $members = \App\Member::paginate(10);
         return view('layouts.member.list')->with('members',$members);
     }
 
@@ -60,6 +60,14 @@ class MemberController extends Controller
         $member->addr = $request->addr;
         $member->birth = $request->birth;
         $member->save();
+
+        return redirect()->to('member/list');
+    }
+
+    public function member_delete($id)
+    {
+        $member = \App\Member::find($id);
+        $member->delete();
 
         return redirect()->to('member/list');
     }
