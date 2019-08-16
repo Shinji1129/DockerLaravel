@@ -15,7 +15,6 @@
     <input type="hidden" name="tel" value="{{$tel}}">
     <input type="hidden" name="addr" value="{{$addr}}">
     <input type="hidden" name="birth" value="{{$birth}}">
-    <!-- <textarea type="hidden" name="comment" "></textarea> -->
    <table class="list">
        <tr><th>名前</th><td>{{$name}}</td></tr>
        <tr><th>Email</th><td>{{$email}}</td></tr>
