@@ -10,12 +10,14 @@
     <div class="head"><h2>参加者名簿一覧</h2></div>
       <form action="" method="get">
         <div class="serch-wrap">
+          <form action="" method="get">
           <div class="serch">
             <input type="text" name="keyword" class="key-form" value="" placeholder="検索キーワード">
           </div>
           <div class="key">
             <input type="submit" value="検索"  class="btn serch-btn">
           </div>
+          </form>
             <a href="{{ action('MemberController@new_Index') }}" class="btn create-btn">新規登録</a>
       </div>
   </section>
@@ -42,8 +44,8 @@
          <td>
          <form action="/member/delete/{{$member->id}}" method="post">
          @csrf
-          <input type="submit" value="削除" class="btn dell-btn"></td>
-          </form>
+          <input type="submit" value="削除" class="btn dell-btn">
+          </form></td>
        </tr>
        @endforeach
      </tbody>

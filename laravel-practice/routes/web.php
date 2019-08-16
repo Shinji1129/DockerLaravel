@@ -29,3 +29,5 @@ Route::group(['prefix' => 'member'], function() {
 Route::group(['prefix' => 'member'], function() {
   Route::post('delete/{id}/', 'MemberController@member_delete');
 });
+
+Route::get('list', 'StudentController@getIndex');
