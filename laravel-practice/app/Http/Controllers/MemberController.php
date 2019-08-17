@@ -43,7 +43,7 @@ class MemberController extends Controller
         $member->birth = $request->birth;
         $member->save();
 
-        return redirect()->to('member/list');
+        return redirect()->to('member/list')->with('flash_message', '登録が完了しました。');
     }
 
     public function edit_index($id)
@@ -69,7 +69,7 @@ class MemberController extends Controller
         $member->birth = $request->birth;
         $member->save();
 
-        return redirect()->to('member/list');
+        return redirect()->to('member/list')->with('flash_message', '内容が更新されました。');
     }
 
     public function member_delete($id)
@@ -77,7 +77,7 @@ class MemberController extends Controller
         $member = \App\Member::find($id);
         $member->delete();
 
-        return redirect()->to('member/list');
+        return redirect()->to('member/list')->with('flash_message', '削除が完了しました。');
     }
 
 }
