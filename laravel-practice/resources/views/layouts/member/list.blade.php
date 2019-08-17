@@ -19,6 +19,13 @@
           </div>
           </form>
             <a href="{{ action('MemberController@new_Index') }}" class="btn create-btn">新規登録</a>
+        <!-- フラッシュ・メッセージ -->
+        @if (session('flash_message'))
+          <div class="flash-message">
+            {{ session('flash_message') }}
+          </div>
+        @endif
+
       </div>
   </section>
   <section id="list-table">
@@ -45,7 +52,8 @@
          <form action="/member/delete/{{$member->id}}" method="post">
          @csrf
           <input type="submit" value="削除" class="btn dell-btn">
-          </form></td>
+          </form>
+        </td>
        </tr>
        @endforeach
      </tbody>
@@ -56,4 +64,5 @@
   <div class="pager">
   {{ $members->links() }}
   </div>
+
 @endsection
