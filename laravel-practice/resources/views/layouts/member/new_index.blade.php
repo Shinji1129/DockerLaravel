@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
 @section('content')
+<?php
+var_dump($_FILES);
+?>
   <header id="">
 　　　<h1>Laravel Project</h1>
   </header>
@@ -8,7 +11,7 @@
     <div class="head"><h2>参加者登録</h2></div>
   </section>
   <section id="list-table">
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
       @csrf
       @method('PATCH')
    <table class="list">
@@ -23,17 +26,23 @@
        </div>
        <tr><th>出身(都道府県)</th><td><input type="text" class="form" id="addr" name="addr" value="{{old('addr')}}"></td></tr>
        <tr><th>誕生日</th><td><input type="text" class="form" name="birth" placeholder="2000/12/12" value="{{old('birth')}}"></td></tr>
-   </table>
+       </table>
   </section>
   <section id="picture">
-    <div class="pic-wrap">
-   <div class="pic">
-     <img src="" alt="">
-    </div>
-    <div class="comment">
-      <textarea name="text"></textarea>
-    </div>
-  </div>
+       <div class="section-wrap">
+         <div class="pic-wrap">
+       <div class="pic-title">画像</div>
+       <div class="pic">
+       <input type="file" class="form" name="image">
+       </div>
+       </div>
+       <div class="com-wrap">
+       <div class="pic-title">メモ</div>
+       <div class="comment">
+       <textarea type="text" class="" name="comment" placeholder="" value="{{old('comment')}}"></textarea>
+       </div>
+       </div>
+       </div>
   </section>
   <section id="back">
     <input type="submit" class="btn create-btn" value="登録内容確認">

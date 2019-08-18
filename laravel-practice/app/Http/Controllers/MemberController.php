@@ -41,6 +41,8 @@ class MemberController extends Controller
         $member->tel = $request->tel;
         $member->addr = $request->addr;
         $member->birth = $request->birth;
+        $member->image = $request->file('image')->storeAs('public/images');
+        $member->comment = $request->comment;
         $member->save();
 
         return redirect()->to('member/list')->with('flash_message', '登録が完了しました。');
@@ -67,6 +69,8 @@ class MemberController extends Controller
         $member->tel = $request->tel;
         $member->addr = $request->addr;
         $member->birth = $request->birth;
+        $member->image = $request->file('image')->store('images');
+        $member->comment = $request->comment;
         $member->save();
 
         return redirect()->to('member/list')->with('flash_message', '内容が更新されました。');

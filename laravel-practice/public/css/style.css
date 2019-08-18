@@ -101,6 +101,10 @@ input[type="submit"], .btn {
   outline: none;
 }
 
+input[type="file"]{
+  width: 100%;
+  height: 100%;
+}
 textarea {
   font-size: 16px;
   width: 100%;
@@ -143,14 +147,24 @@ textarea {
 }
 
 /************** detail ***************/
-.pic-wrap {
-  margin: 0 20px;
+.section-wrap {
   display: flex;
   justify-content: space-between;
 }
 
+.pic-wrap{
+width: 40%;
+}
+.pic-title{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px;
+}
 .pic {
-  width: 40%;
+  height: 240px;
+  width: 100%;
+  border: 3px dashed #e9f5ff;
+  border-radius: 5px;
 }
 
 .pic img {
@@ -158,8 +172,12 @@ textarea {
   vertical-align: bottom;
 }
 
-.comment {
+.com-wrap{
   width: 50%;
+}
+.comment {
+  height: 220px;
+  width: 95%;
   padding: 10px;
   border: 1px solid #333;
   border-radius: 5px;

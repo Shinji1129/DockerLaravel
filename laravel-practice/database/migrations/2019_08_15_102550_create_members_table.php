@@ -18,8 +18,10 @@ class CreateMembersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('tel');
-            $table->string('addr');
-            $table->string('birth');
+            $table->string('addr')->nullable();
+            $table->string('birth')->nullable();
+            $table->string('image')->nullable();
+            $table->text('comment')->nullable();
             $table->timestamps();
         });
     }
