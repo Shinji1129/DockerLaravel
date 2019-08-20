@@ -3,8 +3,6 @@
 @section('content')
   <header id="">
 　　　<h1>Laravel Project</h1>
-<div class="nav"><a href="" class="btn list-btn">ログアウト</a>
-  <a href="" class="btn list-btn">管理者情報</a></div>
   </header>
   <section id="serch">
     <div class="head"><h2>参加者名簿一覧</h2></div>
@@ -46,8 +44,7 @@
          <td>{{$member->name}}</td>
          <td>{{$member->email}}</td>
          <td>{{$member->tel}}</td>
-         <td><a href="" class="btn detail-btn">詳細</a></td>
-         <td><a href="{{ action('MemberController@edit_index',[$member->id]) }}"  class="btn edit-btn">編集</a></td>
+         <td><a href="{{ action('MemberController@edit_index',[$member->id]) }}"  class="btn edit-btn">詳細・編集</a></td>
          <td>
          <form action="/member/delete/{{$member->id}}" method="post">
          @csrf

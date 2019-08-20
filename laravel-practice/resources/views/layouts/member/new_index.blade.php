@@ -25,15 +25,6 @@
        <tr><th>誕生日</th><td><input type="text" class="form" name="birth" placeholder="2000/12/12" value="{{old('birth')}}"></td></tr>
    </table>
   </section>
-  <section id="picture">
-    <div class="pic-wrap">
-   <div class="pic">
-     <img src="" alt="">
-    </div>
-    <div class="comment">
-      <textarea name="text"></textarea>
-    </div>
-  </div>
   </section>
   <section id="back">
     <input type="submit" class="btn create-btn" value="登録内容確認">

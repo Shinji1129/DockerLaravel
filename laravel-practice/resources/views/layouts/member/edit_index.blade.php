@@ -31,15 +31,6 @@
       <tr><th>誕生日</th><td><input type="text" class="form" name="birth" value="{{$member->birth}}"></td></tr>
    </table>
   </section>
-  <section id="picture">
-    <div class="pic-wrap">
-   <div class="pic">
-     <img src="" alt="">
-    </div>
-    <div class="comment">
-    </div>
-  </div>
-  </section>
   <section id="back">
     <input type="submit" class="btn edit-btn" value="編集内容確認">
       </form>
