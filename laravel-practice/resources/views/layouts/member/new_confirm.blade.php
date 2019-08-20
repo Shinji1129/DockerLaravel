@@ -23,16 +23,6 @@
        <tr><th>誕生日</th><td>{{$birth}}</td></tr>
    </table>
   </section>
-  <section id="picture">
-    <div class="pic-wrap">
-   <div class="pic">
-     <img src="" alt="">
-    </div>
-    <div class="comment">
-      <p></p>
-    </div>
-  </div>
-  </section>
   <section id="back">
       <input type="submit" class="btn create-btn" value="登録">
   </form>

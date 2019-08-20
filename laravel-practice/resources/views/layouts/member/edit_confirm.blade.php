@@ -16,28 +16,14 @@
       <input type="hidden" name="addr" value="{{$addr}}">
       <input type="hidden" name="birth" value="{{$birth}}">
    <table class="list">
-     <thead>
-       <tr>
-         <th></th>
-         <th>編集前</th>
-         <th>編集後</th>
-       </tr>
-     </thead>
+     <tbody>
        <tr><th>名前</th><td></td><td>{{$name}}</td></tr>
        <tr><th>Email</th><td></td><td>{{$email}}</td></tr>
        <tr><th>電話番号</th><td></td><td>{{$tel}}</td></tr>
        <tr><th>出身</th><td></td><td>{{$addr}}</td></tr>
        <tr><th>誕生日</th><td></td><td>{{$birth}}</td></tr>
+     </tbody>
    </table>
-  </section>
-  <section id="picture">
-    <div class="pic-wrap">
-   <div class="pic">
-     <img src="" alt="">
-    </div>
-    <div class="comment">
-    </div>
-  </div>
   </section>
   <section id="back">
     <input type="submit" class="btn edit-btn" value="編集確定">
